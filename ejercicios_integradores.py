@@ -1,3 +1,5 @@
+# 1 MÁXIMO COMÚN DIVISOR:
+
 def mcd(a, b):
     while b != 0:
         a, b = b, a % b
@@ -9,6 +11,8 @@ resultado = mcd(num1, num2)
 print(f"El MCD de {num1} y {num2} es {resultado}")
 
 
+# 2 MÍNIMO COMÚN MULTIPLO:
+
 def mcm(a, b):
     return abs(a * b) // mcd(a, b)
 
@@ -16,6 +20,9 @@ num1 = 10
 num2 = 12
 resultado = mcm(num1, num2)
 print(f"El MCM de {num1} y {num2} es {resultado}")
+
+
+# 3 CONTAR PALABRAS
 
 def contar_palabras(cadena):
     # Convertir la cadena a minúsculas y dividirla en palabras
@@ -30,7 +37,9 @@ def contar_palabras(cadena):
             frecuencia[palabra] = 1
     return frecuencia
 
-print(contar_palabras("caca pis pis culo caca pis"))
+print(contar_palabras("hola mundo al mundo al que le dije hola mundo"))
+
+
 
 def palabra_mas_repetida(frecuencia):
     # Inicializar variables para la palabra más repetida y su frecuencia
@@ -42,9 +51,11 @@ def palabra_mas_repetida(frecuencia):
             max_palabra = palabra
     return max_palabra, max_frecuencia
 
-frecuencia = contar_palabras("caca pis pis culo caca pis")
-# print(palabra_mas_repetida(frecuencia))
+frecuencia = contar_palabras("hola mundo al mundo al que le dije hola mundo")
+print(palabra_mas_repetida(frecuencia))
 
+
+# 5a INGRESE UN NÚMERO
 
 def get_int():
     while True:
@@ -58,6 +69,8 @@ def get_int():
 numero = get_int()
 print(f"El número introducido es: {numero}")
 
+# 5a INGRESE UN NÚMERO(recursivo)
+
 def get_int_recursivo():
     try:
         valor = int(input("Introduce un número entero: "))
@@ -70,6 +83,8 @@ def get_int_recursivo():
 numero_recursivo = get_int_recursivo()
 print(f"El número introducido es: {numero_recursivo}")
 
+
+# 6 CLASE 'PERSONA'
 
 class Persona:
     def __init__(self, nombre="", edad=0, dni=""):
@@ -124,6 +139,9 @@ persona.set_dni("12345678")
 persona.mostrar()
 print(f"Es mayor de edad: {persona.es_mayor_de_edad()}")
 
+
+
+# 7 CLASE 'CUENTA'
 
 class Cuenta:
     def __init__(self, titular=None, cantidad=0.0):
@@ -183,6 +201,8 @@ cuenta.retirar(200)
 # Mostramos los datos de la cuenta actualizados
 cuenta.mostrar()
 
+
+# 8 CLASE 'CUENTA JÓVEN'
 
 class CuentaJoven(Cuenta):
     def __init__(self, titular=None, cantidad=0.0, bonificacion=0.0):
